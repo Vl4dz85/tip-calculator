@@ -1,14 +1,14 @@
 import { Card, Stack } from "@twilio-paste/core";
 import { MenuItemsContainer } from "../containers/MenuItemsContainer";
+import { NewItemFormContainer } from "../containers/NewItemFormContainer";
 import { TipSelectContainer } from "../containers/TipSelectContainer";
 
-import { NewItemForm } from "./NewItemForm";
 import { SummaryLine } from "./SummaryLine";
 
 const Calculator = () => {
   return (
     <Card>
-      <NewItemForm />
+      <NewItemFormContainer />
       <Stack orientation="vertical" spacing="space60">
         <MenuItemsContainer />
       </Stack>
