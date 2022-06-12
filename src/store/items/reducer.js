@@ -1,6 +1,6 @@
-import { ITEM_ADDED } from "./actions";
+import { ITEM_ADDED, ITEM_DELETED } from "./actions";
 
-let id = 3;
+let id = 0;
 
 export const initialItems = [
   { uuid: 1, name: "Tofu Roast", price: 14, quantity: 1 },
@@ -11,6 +11,9 @@ export const reducer = (state = initialItems, action) => {
   if (action.type === ITEM_ADDED) {
     const item = { uuid: id++, quantity: 1, ...action.payload };
     return [...state, item];
+  }
+  if (action.type === ITEM_DELETED) {
+    return state.filter((item) => item.uuid !== action.payload.uuid);
   }
   return state;
 };

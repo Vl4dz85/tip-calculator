@@ -10,7 +10,7 @@ import {
 
 import { toCurrency } from "../utilities";
 
-export const MenuItem = ({ uuid, name, price, quantity, total }) => {
+export const MenuItem = ({ uuid, name, price, quantity, total, onDelete }) => {
   return (
     <Card marginTop="space40">
       <Heading variant="heading30" as="h3">
@@ -36,7 +36,7 @@ export const MenuItem = ({ uuid, name, price, quantity, total }) => {
         </Box>
       </Flex>
       <Box width="100%" textAlign="right">
-        <Button variant="destructive_secondary" size="small">
+        <Button variant="destructive_secondary" size="small" onClick={onDelete}>
           Remove
         </Button>
       </Box>
