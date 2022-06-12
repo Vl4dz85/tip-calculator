@@ -10,7 +10,14 @@ import {
 
 import { toCurrency } from "../utilities";
 
-export const MenuItem = ({ uuid, name, price, quantity, total, onDelete }) => {
+export const MenuItem = ({
+  uuid,
+  name,
+  price,
+  quantity,
+  total,
+  onDelete = () => {}
+}) => {
   return (
     <Card marginTop="space40">
       <Heading variant="heading30" as="h3">

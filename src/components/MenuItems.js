@@ -1,6 +1,5 @@
 import { Stack } from "@twilio-paste/stack";
 import { MenuItemContainter } from "../containers/MenuItemContainer";
-// import MenuItem from "../components/MenuItem";
 
 export const MenuItems = ({ items }) => {
   return (
