@@ -16,7 +16,8 @@ export const MenuItem = ({
   price,
   quantity,
   total,
-  onDelete = () => {}
+  onDelete = () => {},
+  updatePrice = () => {}
 }) => {
   return (
     <Card marginTop="space40">
@@ -30,7 +31,7 @@ export const MenuItem = ({
             id={`${uuid}-price`}
             insertBefore={<div>$</div>}
             value={price}
-            onChange={() => {}}
+            onChange={(e) => updatePrice(e.target.value)}
           />
         </Box>
         <Box padding="space20">
