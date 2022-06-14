@@ -17,7 +17,8 @@ export const MenuItem = ({
   quantity,
   total,
   onDelete = () => {},
-  updatePrice = () => {}
+  updatePrice = () => {},
+  updateQuantity = () => {}
 }) => {
   return (
     <Card marginTop="space40">
@@ -36,7 +37,11 @@ export const MenuItem = ({
         </Box>
         <Box padding="space20">
           <Label htmlFor={`${uuid}-quantity`}>Quantity</Label>
-          <Input id={`${uuid}-quantity`} value={quantity} onChange={() => {}} />
+          <Input
+            id={`${uuid}-quantity`}
+            value={quantity}
+            onChange={(e) => updateQuantity(e.target.value)}
+          />
         </Box>
         <Box padding="space20" textAlign="right" width="100%">
           <Heading variant="heading50">Total</Heading>

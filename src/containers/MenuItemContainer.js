@@ -1,11 +1,17 @@
 import { connect } from "react-redux";
-import { deleteItem, updatePrice } from "../store/items/actions";
+import {
+  deleteItem,
+  updatePrice,
+  updateQuantity
+} from "../store/items/actions";
 import { MenuItem } from "../components/MenuItem";
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onDelete: () => dispatch(deleteItem(ownProps.uuid)),
-    updatePrice: (price) => dispatch(updatePrice(ownProps.uuid, price))
+    updatePrice: (price) => dispatch(updatePrice(ownProps.uuid, price)),
+    updateQuantity: (quantity) =>
+      dispatch(updateQuantity(ownProps.uuid, quantity))
   };
 };
 
