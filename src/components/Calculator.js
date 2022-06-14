@@ -3,7 +3,7 @@ import { MenuItemsContainer } from "../containers/MenuItemsContainer";
 import { NewItemFormContainer } from "../containers/NewItemFormContainer";
 import { TipSelectContainer } from "../containers/TipSelectContainer";
 
-import { SummaryLine } from "./SummaryLine";
+import { SummaryContainer } from "../containers/SummaryContainer";
 
 const Calculator = () => {
   return (
@@ -13,12 +13,7 @@ const Calculator = () => {
         <MenuItemsContainer />
       </Stack>
       <TipSelectContainer />
-      <Stack orientation="vertical" spacing="space30">
-        <SummaryLine title="Subtotal">$0.00</SummaryLine>
-        <SummaryLine title="Tax">$0.00</SummaryLine>
-        <SummaryLine title="Tip Amount">$0.00</SummaryLine>
-        <SummaryLine title="Total">$0.00</SummaryLine>
-      </Stack>
+      <SummaryContainer />
     </Card>
   );
 };
