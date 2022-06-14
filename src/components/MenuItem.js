@@ -20,7 +20,6 @@ export const MenuItem = ({
   updatePrice = () => {},
   updateQuantity = () => {}
 }) => {
-  console.log(total);
   return (
     <Card marginTop="space40">
       <Heading variant="heading30" as="h3">
